@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Retro Arcade Hub | Classic Gaming Experience</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Pixel Decorations -->
+    <div class="pixel-corner pixel-corner-tl"></div>
+    <div class="pixel-corner pixel-corner-tr"></div>
+    <div class="pixel-corner pixel-corner-bl"></div>
+    <div class="pixel-corner pixel-corner-br"></div>
+    <div class="pixel-grid"></div>
+    <div class="floating-pixels"></div>
+    <div class="crt-overlay"></div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="logo">
+                <span class="pixel-text">RETRO ARCADE HUB</span>
+                <span class="pixel-underline"></span>
+            </h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#games" class="nav-link">Games</a></li>
+                    <li><a href="#highscores" class="nav-link">High Scores</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#community" class="nav-link">Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Relive the Golden Age of Gaming</h2>
+                <p class="hero-subtitle">Authentic 8-bit classics with modern enhancements</p>
+                <button class="cta-button pulse">PLAY NOW</button>
+                <div class="hero-scroll-indicator">▼</div>
+            </div>
+        </section>
+
+        <!-- Games Section -->
+        <section id="games" class="games-section">
+            <h2 class="section-title">CLASSIC GAMES</h2>
+            <div class="games-grid"></div>
+        </section>
+
+        <!-- High Scores Section -->
+        <section id="highscores" class="scores-section">
+            <div class="section-container">
+                <h2 class="section-title">HIGH SCORES</h2>
+                <div class="scoreboards">
+                    <div class="scoreboard">
+                        <h3>PAC-MAN</h3>
+                        <ol class="score-list" id="pacman-scores"></ol>
+                    </div>
+                    <div class="scoreboard">
+                        <h3>SPACE INVADERS</h3>
+                        <ol class="score-list" id="invaders-scores"></ol>
+                    </div>
+                    <div class="scoreboard">
+                        <h3>TETRIS</h3>
+                        <ol class="score-list" id="tetris-scores"></ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2 class="section-title">ABOUT THE HUB</h2>
+                    <p>Retro Arcade Hub is a passion project dedicated to preserving the golden age of arcade gaming.</p>
+                </div>
+                <div class="about-image">
+                    <div class="pixel-monitor">
+                        <div class="pixel-screen" id="demo-screen"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="community-section">
+            <h2 class="section-title">JOIN OUR COMMUNITY</h2>
+            <form class="newsletter-form">
+                <input type="email" placeholder="YOUR@EMAIL.COM" required>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="pixel-text">RETRO ARCADE HUB</span>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                </ul>
+            </div>
+            <div class="music-controls">
+                <button class="music-toggle" aria-label="Toggle music">🔊</button>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© <span id="current-year"></span> RETRO ARCADE HUB</p>
+        </div>
+    </footer>
+
+    <!-- Game Modal -->
+    <div class="game-modal" id="gameModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title" id="modalGameTitle">Game Title</h2>
+            <div class="modal-game-container" id="modalGameContainer"></div>
+            <div class="modal-game-info" id="modalGameInfo"></div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="hoverSound" src="assets/sounds/hover.wav" preload="auto"></audio>
+    <audio id="clickSound" src="assets/sounds/click.mp3" preload="auto"></audio>
+    <audio id="coinSound" src="assets/sounds/coin-insert.wav" preload="auto"></audio>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="assets/sounds/bg music 1.mp3" type="audio/mpeg">
+        <source src="assets/sounds/bg music 2.wav" type="audio/mpeg">
+    </audio>
+
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

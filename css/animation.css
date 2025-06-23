@@ -1,0 +1,111 @@
+/* Keyframe Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px);
+    }
+    50% {
+        transform: translateY(10px) translateX(-10px);
+    }
+    75% {
+        transform: translateY(-10px) translateX(20px);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+    }
+    100% {
+        text-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 45px var(--neon-purple);
+    }
+}
+
+@keyframes pixelFlash {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 0, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 255, 0);
+    }
+}
+
+/* Animation Classes */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.glowing-text {
+    animation: textGlow 1.5s infinite alternate;
+}
+
+/* Demo Screen Animation */
+@keyframes demoGame {
+    0% {
+        content: 'INSERT COIN';
+    }
+    20% {
+        content: 'PLAYER 1';
+    }
+    40% {
+        content: 'HIGH SCORE';
+    }
+    60% {
+        content: 'GAME OVER';
+    }
+    80% {
+        content: 'CONTINUE?';
+    }
+    100% {
+        content: 'INSERT COIN';
+    }
+}
+
+.pixel-screen::before {
+    content: 'INSERT COIN';
+    animation: demoGame 8s infinite;
+}
